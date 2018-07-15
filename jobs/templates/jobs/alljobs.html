@@ -1,15 +1,15 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
+{% load staticfiles %}
   <head>
-    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-    <title>My expanding world</title>
+    <title>مالپه‌ری تایبه‌تی مامه</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
 
     <!-- Bootstrap core CSS -->
@@ -25,28 +25,28 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="{% url 'home' %}">Mam Peter</a>
+      <a class="navbar-brand" href="{% url 'home' %}">مامم پیتیر</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'home' %}">ماله‌وه <span class="sr-only">(current)</span></a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="http://twitter.com/sattarkarashi">Twitter</a>
+            <a class="nav-link" href="#">توییتر</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              English
+              کوردی
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-              <a class="dropdown-item" href='{% url 'alljobs' %}'>Kurdish</a>
-              <a class="dropdown-item" href="#">Persian</a>
-              <a class="dropdown-item" href="#">Deutsch</a>
+              <a class="dropdown-item" href="{% url 'home' %}">ئینگلیزی</a>
+              <a class="dropdown-item" href="#">فارسی</a>
+              <a class="dropdown-item" href="#">ئه‌لمانی</a>
             </div>
           </li>
         </ul>
@@ -64,16 +64,16 @@
           <div class="jumbotron">
             <div class="row">
               <div class="col-8 col-lg-9">
-            <h2>Welcome to my expanding world</h2><br>
-            <p style="font-size:20px" >Expansion is potentially a proper perspective to expand our mindset regardless of chains of limitations</p>
+            <h2>به خیرهاتن به ولاتی بی‌سنور</h2><br>
+            <p style="font-size:20px" >ده‌مانه‌هوی له گه‌ل یه‌ک دونیایه‌یکی بی سنور دامه‌زرینین به‌لام هه‌وه‌ل جار ده‌بی بیرو‌هزرمان بی‌سنور به‌ره‌و گه‌شه‌کردن ببه‌به‌ینُ</p>
 
-            <p><a href="#" class="btn btn-primary my-2">Contact Me</a></p>
+            <p><a href="#" class="btn btn-primary my-2">په‌یوه‌ندیم‌ له‌گه‌ل بگره</a></p>
           </div>
 
 
 
           <div class="col-12 col-lg-3">
-            <img src="{% static 'me.jpg' %}" width=180px height=200px>
+            <img src="https://image.ibb.co/m8k0p8/photo_2018_05_29_19_22_04.jpg" width=180px height=200px>
 
 
           </div>
@@ -86,10 +86,10 @@
 
 
           <div class="row">
-            <div class="col-6 col-lg-9">
+            <div class="col-6 col-lg-12">
               <h2>{{blog.title}}</h2>
 
-              {{blog.pub_date_pretty}}
+              {{blog.pub_date}}
 
 
 
@@ -99,12 +99,12 @@
               </div><!--/row-->
               <div class="row">
               <div class="col-6 col-lg-8">
-                <p>{{blog.summary}}</p>
+                <p>{{blog.body}}</p>
 
 
               </div>
               <div class="col-6 col-lg-4">
-                <img src="{{blog.image.url}}" alt="" height=130 width=250>
+                <img src="{{blog.image.url}}" alt="" height=200 width=350>
               </div>
 
 
@@ -112,7 +112,7 @@
 
 
 
-              <p><a class="btn btn-secondary" href="{% url 'detail' blog.id %}" role="button">View details &raquo;</a></p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
               </div>
 
 
@@ -133,20 +133,7 @@
             <a href="#" class="list-group-item">Seth Godin</a>
 
           </div>
-          <br><br><br>
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Latest Posts</a>
-            {% for blog in blog.all%}
-            <a href="#" class="list-group-item">{{blog.title}}</a>
-            {% endfor %}
-            
-
-          </div>
-        </div>
-        <br><br><br>
-
-
-        <!--/span-->
+        </div><!--/span-->
       </div><!--/row-->
 
       <hr>
